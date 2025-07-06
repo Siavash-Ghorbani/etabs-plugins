@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siavash Ghorbani - ETABS Plugins</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .plugin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100px;
+        }
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header -->
+    <header class="gradient-bg text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">ETABS Structural Plugins</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Powerful tools for structural engineers to enhance productivity in ETABS</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#plugins" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 transition duration-300">
+                    Explore Plugins
+                </a>
+                <a href="#contact" class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition duration-300">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,206.8,24.88,77.45,0,154.1-6.86,227.8-20.19,80.13-14.63,172.2-43.55,250-72.05V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Developer -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
+                        <img src="assets/profile-photo.jpg" alt="Siavash Ghorbani" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">About the Developer</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Hi, I'm <span class="font-semibold text-blue-600">Siavash Ghorbani</span>, a structural engineer and software developer specializing in creating powerful plugins for ETABS. With years of experience in structural analysis and programming, I develop tools that bridge the gap between engineering needs and software capabilities.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+                            <i class="fas fa-graduation-cap text-blue-500 mr-2"></i>
+                            <span>M.Sc. in Structural Engineering</span>
+                        </div>
+                        <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+                            <i class="fas fa-code text-blue-500 mr-2"></i>
+                            <span>5+ Years Programming Experience</span>
+                        </div>
+                        <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+                            <i class="fas fa-building text-blue-500 mr-2"></i>
+                            <span>Structural Design Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plugins Section -->
+    <section id="plugins" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">My ETABS Plugins</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Enhance your structural analysis workflow with these powerful plugins designed specifically for ETABS users.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Plugin 1 -->
+                <div class="plugin-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-cube text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Model Optimizer</h3>
+                        <p class="text-gray-600 mb-4">
+                            Automatically optimizes your ETABS model by cleaning up unused elements, merging duplicates, and organizing layers.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Automation</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Efficiency</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Cleanup</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Plugin 2 -->
+                <div class="plugin-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Result Analyzer</h3>
+                        <p class="text-gray-600 mb-4">
+                            Advanced analysis and visualization of ETABS results with customizable reports and interactive charts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Visualization</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Reporting</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Analysis</span>
+                        </div>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Plugin 3 -->
+                <div class="plugin-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-bolt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Quick Designer</h3>
+                        <p class="text-gray-600 mb-4">
+                            Rapid design and code-checking tool that accelerates the structural design process within ETABS.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Design</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Code Check</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Automation</span>
+                        </div>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Plugin 4 -->
+                <div class="plugin-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-orange-500 to-orange-700 flex items-center justify-center">
+                        <i class="fas fa-exchange-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Data Exporter</h3>
+                        <p class="text-gray-600 mb-4">
+                            Seamless export of ETABS data to various formats including Excel, CSV, and JSON for further processing.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Export</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Integration</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Data</span>
+                        </div>
+                        <button class="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-lg transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose These Plugins?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Designed with structural engineers in mind to save time and improve accuracy.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Time Saving</h3>
+                    <p class="text-gray-600">
+                        Automate repetitive tasks and reduce manual work by up to 70% with our optimized workflows.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-check-circle text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Accuracy</h3>
+                    <p class="text-gray-600">
+                        Minimize human errors with automated calculations and built-in validation checks.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Enhanced Analysis</h3>
+                    <p class="text-gray-600">
+                        Go beyond standard ETABS capabilities with advanced analysis and visualization tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Users Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Feedback from structural engineers who use these plugins daily.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c232b9e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Senior Structural Engineer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "The Model Optimizer plugin has saved our team countless hours of manual cleanup. It's become an essential part of our workflow."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                            <p class="text-sm text-gray-600">Structural Design Lead</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "The Quick Designer plugin has revolutionized how we approach design in ETABS. The code-checking features are incredibly thorough."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-xl max-w-2xl mx-auto">
+                    Have questions about the plugins or need custom development? Contact me directly.
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-lg">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 placeholder-white placeholder-opacity-70"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+                <div class="mt-8 text-center">
+                    <p class="mb-4">Or contact me directly at:</p>
+                    <a href="mailto:siavash.trader@gmail.com" class="text-xl font-semibold hover:underline">siavash.trader@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Siavash Ghorbani</h3>
+                    <p class="text-gray-400">Structural Engineer & Plugin Developer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Siavash Ghorbani. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
