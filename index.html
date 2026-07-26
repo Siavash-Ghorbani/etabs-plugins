@@ -10,7 +10,7 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .hero-gradient { background: linear-gradient(135deg, #172554 0%, #1d4ed8 58%, #0891b2 100%); }
+    .hero-gradient {\n      background-color: #172554 !important;\n      background-image: linear-gradient(135deg, #172554 0%, #1d4ed8 58%, #087f9b 100%) !important;\n    }
     .grid-pattern {
       background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
       background-size: 34px 34px;
@@ -20,12 +20,12 @@
     .icon-tile { background: linear-gradient(135deg, #eff6ff, #ecfeff); }
     .blueprint-line { position: relative; }
     .blueprint-line::after { content: ""; position: absolute; left: 0; bottom: -10px; width: 56px; height: 3px; border-radius: 99px; background: #38bdf8; }
-    .status-dot { width: 8px; height: 8px; border-radius: 999px; display: inline-block; }
+    .status-dot { width: 8px; height: 8px; border-radius: 999px; display: inline-block; }\n    section[id] { scroll-margin-top: 78px; }\n    @media (prefers-reduced-motion: reduce) {\n      html { scroll-behavior: auto; }\n      .project-card { transition: none; }\n    }
   </style>
 </head>
 <body class="bg-white text-slate-800 antialiased">
 
-  <nav class="absolute inset-x-0 top-0 z-30 border-b border-white/15 bg-slate-950/10 backdrop-blur-sm">
+  <nav class="absolute inset-x-0 top-0 z-30 border-b border-white/20 backdrop-blur-sm" style="background-color:rgba(15,23,42,.52)">
     <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
       <a href="#top" class="flex items-center gap-3 text-white">
         <span class="flex h-11 w-11 items-center justify-center rounded-lg border border-cyan-300/70 bg-white/10 text-lg font-bold">CP</span>
@@ -45,20 +45,20 @@
     </div>
   </nav>
 
-  <header id="top" class="hero-gradient grid-pattern relative overflow-hidden pt-20 text-white">
+  <header id="top" class="hero-gradient grid-pattern relative overflow-hidden pt-20 text-white" style="background-color:#172554;background-image:linear-gradient(135deg,#172554 0%,#1d4ed8 58%,#087f9b 100%)">
     <div class="absolute -right-24 top-28 h-96 w-96 rounded-full bg-cyan-300/15 blur-3xl"></div>
     <div class="absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-blue-950/30 blur-3xl"></div>
-    <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 md:grid-cols-[1.25fr_.75fr] md:py-32">
+    <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-[1.25fr_.75fr] md:py-24">
       <div>
-        <p class="mb-5 text-xs font-bold uppercase tracking-[.24em] text-cyan-200">Engineering logic · software precision</p>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[.24em] text-cyan-100">Structural engineering · practical automation</p>
         <h1 class="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-          Structural Engineering,<br><span class="text-cyan-200">Enhanced by Software</span>
+          Structural Engineering,<br><span class="text-cyan-100">Enhanced by Software</span>
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-blue-50 md:text-xl">
-          Practical plugins and automation tools built from real structural-design needs—helping engineers work faster, reduce repetitive tasks, and keep calculations clear.
+          I build practical ETABS and SAFE plugins from real structural-design needs—helping engineers reduce repetitive work while keeping calculations clear and reviewable.
         </p>
         <div class="mt-9 flex flex-col gap-4 sm:flex-row">
-          <a href="#projects" class="rounded-lg bg-white px-6 py-3.5 text-center font-bold text-blue-900 shadow-lg transition hover:bg-cyan-50">Explore Projects</a>
+          <a href="#projects" class="rounded-lg bg-white px-6 py-3.5 text-center font-bold text-blue-950 shadow-lg transition hover:bg-cyan-50">Explore Projects</a>
           <a href="https://t.me/Civil_Programming" target="_blank" rel="noopener" class="rounded-lg border-2 border-white/70 px-6 py-3 text-center font-bold transition hover:bg-white hover:text-blue-900">
             <i class="fa-brands fa-telegram mr-2"></i>View Demos & Updates
           </a>
@@ -73,7 +73,7 @@
       </div>
       <div class="mx-auto w-full max-w-sm">
         <div class="rounded-[2rem] border border-white/25 bg-white/10 p-5 shadow-2xl backdrop-blur-md">
-          <img src="assets/profile-photo.jpg" alt="Siavash Ghorbani" class="aspect-[4/5] w-full rounded-2xl object-cover object-top shadow-xl">
+          <img src="assets/profile-photo.jpg" alt="Portrait of Siavash Ghorbani" width="640" height="800" fetchpriority="high" class="aspect-[4/5] w-full rounded-2xl object-cover object-top shadow-xl">
           <div class="px-2 pb-1 pt-5">
             <h2 class="text-2xl font-bold">Siavash Ghorbani</h2>
             <p class="mt-1 text-sm leading-6 text-blue-100">Structural Engineer & Engineering Software Developer</p>
@@ -83,7 +83,7 @@
     </div>
   </header>
 
-  <section id="about" class="bg-slate-50 py-20">
+  <section id="about" class="bg-slate-50 py-16 md:py-20">
     <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-[.75fr_1.25fr]">
       <div class="grid grid-cols-2 gap-4">
         <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
@@ -115,7 +115,7 @@
     </div>
   </section>
 
-  <section id="projects" class="py-24">
+  <section id="projects" class="py-20">
     <div class="mx-auto max-w-7xl px-6">
       <div class="mx-auto mb-14 max-w-3xl text-center">
         <p class="text-xs font-bold uppercase tracking-[.2em] text-blue-600">Selected work</p>
@@ -205,11 +205,11 @@
     </div>
   </section>
 
-  <section class="hero-gradient grid-pattern py-20 text-white">
+  <section class="hero-gradient grid-pattern py-16 text-white" style="background-color:#172554;background-image:linear-gradient(135deg,#172554 0%,#1d4ed8 58%,#087f9b 100%)">
     <div class="mx-auto max-w-4xl px-6 text-center">
       <i class="fa-brands fa-telegram text-5xl text-cyan-200"></i>
       <h2 class="mt-6 text-3xl font-bold md:text-5xl">See the tools in action</h2>
-      <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100">Plugin demonstrations, engineering notes, and release updates are published on the Civil Programming Telegram channel.</p>
+      <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-50">Plugin demonstrations, engineering notes, and release updates are published on the Civil Programming Telegram channel.</p>
       <a href="https://t.me/Civil_Programming" target="_blank" rel="noopener" class="mt-8 inline-block rounded-lg bg-white px-7 py-3.5 font-bold text-blue-900 shadow-lg transition hover:bg-cyan-50">Open Civil Programming</a>
     </div>
   </section>
